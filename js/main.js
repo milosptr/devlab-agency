@@ -11,8 +11,10 @@ function documentReady() {
 }
 
 function changeBodyBg(scroll) {
-  if(scroll > 30)
+  if(scroll > 30) {
     document.body.classList.remove('dark-theme')
-  else
+  }
+  else {
    document.body.classList.add('dark-theme')
+  }
 }

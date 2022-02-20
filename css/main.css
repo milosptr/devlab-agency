@@ -226,7 +226,8 @@ form input::placeholder {
   color: #aaa;
 }
 
-form button {
+form button,
+a.submit-btn {
   width: 100%;
   padding: 6px 20px;
   background: transparent;
