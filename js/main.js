@@ -1,12 +1,14 @@
 document.addEventListener('DOMContentLoaded', documentReady, false)
 
 function documentReady() {
-  const scroller = new LocomotiveScroll({
-    el: document.querySelector('[data-scroll-container]'),
-    smooth: true
-  })
-  scroller.on('scroll', (args) => {
-    changeBodyBg(args.scroll.y)
+  if(window.innerWidth > 450) {
+    const scroller = new LocomotiveScroll({
+      el: document.querySelector('[data-scroll-container]'),
+      smooth: true
+    })
+  }
+  document.addEventListener('scroll', (e) => {
+    changeBodyBg(window.scrollY)
   })
 }
 
