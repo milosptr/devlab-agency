@@ -305,6 +305,9 @@ html.has-scroll-dragging {
     font-size: 2.4rem;
     line-height: 3rem;
   }
+  .h-60 {
+    height: auto;
+  }
   #header .container,
   .container {
     padding: 0 16px;

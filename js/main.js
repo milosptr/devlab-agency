@@ -6,10 +6,14 @@ function documentReady() {
       el: document.querySelector('[data-scroll-container]'),
       smooth: true
     })
+    scroller.on('scroll', (args) => {
+      changeBodyBg(args.scroll.y)
+    })
+  } else {
+    document.addEventListener('scroll', (e) => {
+      changeBodyBg(window.scrollY)
+    })
   }
-  document.addEventListener('scroll', (e) => {
-    changeBodyBg(window.scrollY)
-  })
 }
 
 function changeBodyBg(scroll) {
